@@ -37,7 +37,7 @@
 <span class="icon-bar"></span>
 </button>
 <a href="<?php echo esc_url( home_url() ); ?>" class="navbar-brand">
-<img src="<?php echo esc_url( home_url() ); ?>/wp-content/uploads/2017/03/logo3.png" style="height:50px;" />
+<img src="<?php echo esc_url( home_url() ); ?>/wp-content/uploads/2017/03/logo3.png" class="logo_image" />
 </a>
 </div>
 <div class="collapse navbar-collapse" id="mainNav">
@@ -74,7 +74,8 @@ HOME
 </div>
 
 <div class="row">
-<div class="col-xs-12 col-sm-6">
+
+<div class="col-xs-12 col-sm-8">
 
 <div>
 <?php if ( have_posts() ) : /** WordPress ループ */
@@ -97,12 +98,14 @@ else: /** ここから記事が見つからなかった場合の処理 */ ?>
 </div>
 
 </div>
-<div class="col-xs-12 col-sm-6">
+
+<div class="col-xs-12 col-sm-4">
 <div class="visible-xs" style="height:20px;"></div>
 <div>
 <?php dynamic_sidebar('sidebar-1'); ?>
 </div>
 </div>
+
 </div>
 
 <div id="footer">
