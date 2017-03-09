@@ -27,10 +27,37 @@
 
 <div class="container"><!-- 全体を囲むコンテナ -->
 
-<h1><?php bloginfo( 'name' ); ?></h1>
+<nav class="navbar navbar-default navbar-fixed-top">
+<div class="container">
+<div class="navbar-header">
+<button class="navbar-toggle" data-toggle="collapse" data-target="#mainNav">
+<span class="sr-only">ナビゲーション</span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+<span class="icon-bar"></span>
+</button>
+<a href="<?php echo esc_url( home_url() ); ?>" class="navbar-brand">
+<img src="<?php echo esc_url( home_url() ); ?>/wp-content/uploads/2017/03/logo3.png" style="height:50px;" />
+</a>
+</div>
+<div class="collapse navbar-collapse" id="mainNav">
+<!--ここからWordPressのナビ作成のタグ-->
+<?php
+$defaults = array(
+'menu_class' => 'nav navbar-nav',
+'container'  => false,
+'fallback_cb' => 'wp_page_menu',
+'theme_location' => 'header-navi',
+'items_wrap' => '<ul class="%2$s">%3$s</ul>',
+);
+wp_nav_menu( $defaults );
+?>
+<!--WordPressのナビ作成のタグここまで-->
+</div>
+</div>
+</nav>
 
-<div>
-<?php wp_nav_menu( array( 'theme_location = header-navi' ) ); ?>
+<div class="page_top_space">
 </div>
 
 <div>
@@ -53,7 +80,11 @@ HOME
 <?php if ( have_posts() ) : /** WordPress ループ */
 while ( have_posts() ) : the_post(); /** 繰り返し処理開始 */ ?>
 <div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+<?php if( !is_front_page() ){ ?>
 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+<?php } ?>
+
 <?php the_content(); ?>
 </div>
 <?php endwhile; /** 繰り返し処理終了 */
@@ -75,7 +106,7 @@ else: /** ここから記事が見つからなかった場合の処理 */ ?>
 </div>
 
 <div id="footer">
-&copy; <?php bloginfo( 'name' ); ?> All Rights Reserved.
+&copy; <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> All Rights Reserved.
 </div>
 
 </div><!-- 全体を囲むコンテナ -->

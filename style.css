@@ -11,3 +11,49 @@
 	
 */
 
+
+
+.wpcf7-text{
+	
+	width:100%;
+	
+}
+
+.wpcf7-textarea{
+	
+	width:100%;
+	
+}
+
+.navbar-brand {
+  padding: 0px;
+}
+
+#footer{
+	
+	text-align:center;
+	font-size:10px;
+	
+}
+
+.page_top_space{
+	
+	height:70px;
+	
+}
+
+h2{
+	margin:0px 0px 20px 0px;
+}
+
+@media screen and (min-width : 768px){
+	
+	#footer{
+		font-size:12px;
+	}
+	
+}
+
+@media screen and (min-width : 1024px) {
+	
+}
