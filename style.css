@@ -29,13 +29,6 @@
 	
 	text-align:center;
 	font-size:10px;
-	margin-top:20px;
-	
-}
-
-.page_top_space{
-	
-	height:70px;
 	
 }
 
@@ -136,7 +129,7 @@ table#wp-calendar a {
 	
 	.logo_image{
 	
-		height:35px;
+		height:30px;
 		
 	}
 	
@@ -151,7 +144,9 @@ table#wp-calendar a {
 }
 
 @media screen and (min-width : 1024px) {
+	
 	.container {
 		width: 970px;
 	}
+	
 }

@@ -20,6 +20,10 @@
 
 <link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" media="all" />
 
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style_particles.css" />
+
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style_front.css" />
+
 </head>
 <body>
 
@@ -27,7 +31,6 @@
 
 <div class="container"><!-- 全体を囲むコンテナ -->
 
-<!--<nav class="navbar navbar-default navbar-fixed-top">-->
 <nav class="navbar navbar-default">
 <div class="container">
 <div class="navbar-header">
@@ -58,6 +61,8 @@ wp_nav_menu( $defaults );
 </div>
 </nav>
 
+<div id="wrapper">
+
 <div>
 <?php if( !is_front_page() ){ ?>
 <ul class="breadcrumb">
@@ -83,7 +88,43 @@ while ( have_posts() ) : the_post(); /** 繰り返し処理開始 */ ?>
 <?php if( !is_front_page() ){ ?>
 <h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
 <?php } ?>
-<?php the_content(); ?>
+
+
+
+<section>
+<h2>WEBサイト制作に関することならなんでもお気軽にご相談ください</h2>
+<p>
+<?php
+$html=<<<EOT
+はじめまして。
+
+東京都在住のWEBエンジニアです。
+サイト制作に関することでしたら、コーディングからプログラム、サーバ管理まで、なんでも対応可能です。
+エンジニア歴は10年以上になります。
+
+使用可能言語、ツール：PHP、JavaScript、jQuery、(X)HTML、CSS、HTML5、CSS3、svn、git
+使用可能なデータベース：MySQL、PostgreSQL
+使用可能OS：Windows全般、Linux全般
+
+連絡の手段はご都合に合わせて柔軟に対応致します。
+
+・メール
+・電話
+・ご指定の場所で面談
+・スカイプ
+・チャットワーク
+など
+
+ご依頼・ご相談など、なんでもお気軽にご連絡ください。
+どうぞよろしくお願い致します。
+EOT;
+echo nl2br($html);
+?>
+</p>
+</section>
+
+
+
 </div>
 <?php endwhile; /** 繰り返し処理終了 */
 else: /** ここから記事が見つからなかった場合の処理 */ ?>
@@ -109,8 +150,16 @@ else: /** ここから記事が見つからなかった場合の処理 */ ?>
 &copy; <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> All Rights Reserved.
 </div>
 
+</div>
+
 </div><!-- 全体を囲むコンテナ -->
 
 <?php wp_footer(); ?>
+
+<div id="particles-js"></div>
+
+<script src="<?php echo get_template_directory_uri(); ?>/particles.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/set.js"></script>
+
 </body>
 </html>

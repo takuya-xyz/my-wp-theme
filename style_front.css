@@ -1,0 +1,58 @@
+
+.navbar-default{
+	
+	padding:20px;
+	border-radius:0px 0px 30px 30px;
+	
+	margin:0px 0px 15px 0px;
+	
+}
+
+.row{
+	
+	
+	
+}
+
+#wrapper{
+	
+	border-radius:30px;
+	background:#fff;
+	padding:30px 30px 30px 30px;
+	
+	margin:0px 0px 0px 0px;
+	
+}
+
+h2{
+	font-size:18px;
+	background:#b61924;
+	color:#fff;
+	width:100%;
+	padding:10px;
+}
+
+#particles-js {
+	height:770px;
+}
+
+@media screen and (max-width : 319px){
+	
+	#particles-js {
+		height:1050px;
+	}
+	
+}
+
+@media screen and (min-width : 768px){
+	
+	
+	
+}
+
+@media screen and (min-width : 1024px) {
+	
+	
+	
+}
+
