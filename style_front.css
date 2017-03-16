@@ -8,7 +8,7 @@ body{
 .navbar-default{
 	
 	padding:20px;
-	border-radius:0px 0px 30px 30px;
+	border-radius:0px 0px 0px 0px;
 	
 	margin:0px 0px 15px 0px;
 	
@@ -16,25 +16,87 @@ body{
 
 .row{
 	
-	
+	margin:0px;
+	padding:0px;
 	
 }
 
 #wrapper{
 	
-	border-radius:30px;
+	border-radius:0px;
 	background:#fff;
-	padding:30px 30px 30px 30px;
+	padding:20px 30px 30px 30px;
 	
 	margin:0px 0px 20px 0px;
 	
 }
 
 h2{
+	margin:0px;
 	font-size:18px;
 	background:#b61924;
 	color:#fff;
 	width:100%;
 	padding:10px;
+	background-color: rgba( 182, 25, 36, 0.0 );
+	
 }
+
+.bg_write{
+	
+	background:#fff;
+	
+}
+
+.clear{
+	
+	clear:both;
+	
+}
+
+#footer{
+	
+	background:#fff;
+	margin:0px 0px 20px 0px;
+	padding:20px 0px 10px 0px;
+	
+}
+
+#front_left_box{
+	float:left;
+	width:5%;
+	background:#fff;
+}
+
+#front_center_box{
+	float:left;width:90%;
+}
+
+#front_right_box{
+	float:left;
+	width:5%;
+	background:#fff;
+}
+
+#front-side_area{
+	
+	margin:0px;
+	padding:0px;
+	background:#fff;
+	
+}
+
+#self-introduction{
+	
+	padding-top:20px;
+	background:#fff;
+	
+}
+
+@media screen and (max-width : 767px){
+	
+	
+	
+}
+
 

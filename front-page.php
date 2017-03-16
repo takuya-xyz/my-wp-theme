@@ -61,39 +61,21 @@ wp_nav_menu( $defaults );
 </div>
 </nav>
 
-<div id="wrapper">
-
-<div>
-<?php if( !is_front_page() ){ ?>
-<ul class="breadcrumb">
-<li>
-<a href="<?php echo esc_url( home_url() ); ?>">
-HOME
-</a>
-</li>
-<li class="active"><?php the_title(); ?></li>
-</ul>
-<?php } ?>
+<div class="row bg_write" style="height:30px;">
 </div>
 
 <div class="row">
 
-<div class="col-xs-12 col-sm-8">
+<div class="col-xs-12 col-sm-8" style="margin:0px;padding:0px;">
 
-<div>
-<?php if ( have_posts() ) : /** WordPress ループ */
-while ( have_posts() ) : the_post(); /** 繰り返し処理開始 */ ?>
-<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+<div id="front_left_box">
+</div>
 
-<?php if( !is_front_page() ){ ?>
-<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
-<?php } ?>
+<div id="front_center_box">
 
-
-
-<section>
 <h2>WEBサイト制作に関することならなんでもお気軽にご相談ください</h2>
-<p>
+
+<div id="self-introduction">
 <?php
 $html=<<<EOT
 はじめまして。
@@ -120,36 +102,24 @@ $html=<<<EOT
 EOT;
 echo nl2br($html);
 ?>
-</p>
-</section>
-
-
-
-</div>
-<?php endwhile; /** 繰り返し処理終了 */
-else: /** ここから記事が見つからなかった場合の処理 */ ?>
-<div class="post page">
-<h2>ページがありません</h2>
-<p>お探しのページは見つかりませんでした。</p>
-</div>
-<?php endif; /** WordPress ループここまで */ ?>
 </div>
 
 </div>
 
-<div class="col-xs-12 col-sm-4">
-<div class="visible-xs" style="height:20px;"></div>
-<div id="sidebar">
-<?php dynamic_sidebar('sidebar-1'); ?>
+<div id="front_right_box">
 </div>
+
+<br class="clear" />
+
+</div>
+
+<div class="hidden-xs col-sm-4" id="front-side_area">
 </div>
 
 </div>
 
 <div id="footer">
 &copy; <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> All Rights Reserved.
-</div>
-
 </div>
 
 </div><!-- 全体を囲むコンテナ -->
