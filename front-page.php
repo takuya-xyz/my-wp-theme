@@ -160,6 +160,7 @@ else: /** ここから記事が見つからなかった場合の処理 */ ?>
 
 <script src="<?php echo get_template_directory_uri(); ?>/particles.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/set.js"></script>
+<script src="<?php echo get_template_directory_uri(); ?>/script.js"></script>
 
 </body>
 </html>
