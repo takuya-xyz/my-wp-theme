@@ -1,15 +1,30 @@
 
+*{
+	
+	font-size:12px;
+	
+}
+
 body{
 	
 	background:#b61924;
 	
 }
 
+.logo_image{
+	
+	height:30px;
+	
+}
+
+.navbar-brand {
+  padding: 0px;
+}
+
 .navbar-default{
 	
 	padding:20px;
 	border-radius:0px 0px 0px 0px;
-	
 	margin:0px 0px 15px 0px;
 	
 }
@@ -33,12 +48,13 @@ body{
 
 h2{
 	margin:0px;
-	font-size:18px;
+	font-size:14px;
 	background:#b61924;
 	color:#fff;
 	width:100%;
 	padding:10px;
 	background-color: rgba( 182, 25, 36, 0.0 );
+	line-height:160%;
 	
 }
 
@@ -58,7 +74,16 @@ h2{
 	
 	background:#fff;
 	margin:0px 0px 20px 0px;
-	padding:20px 0px 10px 0px;
+	padding:10px 0px 10px 0px;
+	
+	text-align:center;
+	font-size:12px;
+	
+}
+
+#footer a{
+	
+	font-size:12px;
 	
 }
 
@@ -90,12 +115,35 @@ h2{
 	
 	padding-top:20px;
 	background:#fff;
+	line-height:160%;
 	
 }
 
-@media screen and (max-width : 767px){
+#bottom_area_xs{
 	
+	background:#fff;
+	text-align:center;
+	padding:10px 0px 0px 0px;
 	
+}
+
+@media screen and (min-width : 768px){
+	
+	*{
+		font-size:14px;
+	}
+	
+	h2{
+		font-size:18px;
+	}
+	
+}
+
+@media screen and (min-width : 970px) {
+	
+	.container {
+		width: 970px;
+	}
 	
 }
 

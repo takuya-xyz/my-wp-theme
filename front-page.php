@@ -18,16 +18,12 @@
 
 <?php wp_head();?>
 
-<link rel="stylesheet" type="text/css" href="<?php echo get_stylesheet_uri(); ?>" media="all" />
-
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style_particles.css" />
 
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style_front.css" />
 
 </head>
 <body>
-
-
 
 <div class="container"><!-- 全体を囲むコンテナ -->
 
@@ -114,12 +110,21 @@ echo nl2br($html);
 </div>
 
 <div class="hidden-xs col-sm-4" id="front-side_area">
+side
 </div>
 
 </div>
 
+<div class="row">
+<div class="visible-xs" id="bottom_area_xs">
+visible-xs
+</div>
+</div>
+
+<div class="row">
 <div id="footer">
 &copy; <a href="<?php echo esc_url( home_url() ); ?>"><?php bloginfo( 'name' ); ?></a> All Rights Reserved.
+</div>
 </div>
 
 </div><!-- 全体を囲むコンテナ -->
