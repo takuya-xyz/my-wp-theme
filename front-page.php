@@ -25,9 +25,9 @@
 </head>
 <body>
 
-<div class="container"><!-- 全体を囲むコンテナ -->
+<?php //get_template_part('navbar'); ?>
 
-<nav class="navbar navbar-default">
+<nav class="navbar navbar-default" id="menu-wrap">
 <div class="container">
 <div class="navbar-header">
 <button class="navbar-toggle" data-toggle="collapse" data-target="#mainNav">
@@ -36,26 +36,28 @@
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
 </button>
-<a href="<?php echo esc_url( home_url() ); ?>" class="navbar-brand">
-<img src="<?php echo esc_url( home_url() ); ?>/wp-content/uploads/2017/03/logo3.png" class="logo_image" />
+<a href="http://wp.localhost" class="navbar-brand" style="color:#fff;">
+WEBサイト制作<br />
+アウトオブチャイルド
 </a>
 </div>
 <div class="collapse navbar-collapse" id="mainNav">
 <!--ここからWordPressのナビ作成のタグ-->
-<?php
-$defaults = array(
-'menu_class' => 'nav navbar-nav',
-'container'  => false,
-'fallback_cb' => 'wp_page_menu',
-'theme_location' => 'header-navi',
-'items_wrap' => '<ul class="%2$s">%3$s</ul>',
-);
-wp_nav_menu( $defaults );
-?>
-<!--WordPressのナビ作成のタグここまで-->
+<ul class="nav navbar-nav">
+<li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-8 current_page_item menu-item-18">
+<a href="http://wp.localhost/">HOME</a>
+</li>
+<li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19">
+<a href="http://wp.localhost/inquiry/">お問い合わせ</a>
+</li>
+</ul><!--WordPressのナビ作成のタグここまで-->
 </div>
 </div>
 </nav>
+
+
+
+<div class="container" style="margin-top:50px;"><!-- 全体を囲むコンテナ -->
 
 <div class="row bg_write" style="height:30px;">
 </div>
@@ -81,6 +83,7 @@ $html=<<<EOT
 エンジニア歴は10年以上になります。
 
 使用可能言語、ツール：PHP、JavaScript、jQuery、(X)HTML、CSS、HTML5、CSS3、svn、git
+使用可能なフレームワーク：FuelPHP、CakePHP、Zend Framework、symfony、Codeigniter
 使用可能なデータベース：MySQL、PostgreSQL
 使用可能OS：Windows全般、Linux全般
 
@@ -95,6 +98,34 @@ $html=<<<EOT
 
 ご依頼・ご相談など、なんでもお気軽にご連絡ください。
 どうぞよろしくお願い致します。
+
+【経歴】
+
+某店舗システムの開発、改修
+店舗フロントページ、スタッフ勤怠管理、報酬管理、店舗売上管理、予約管理
+PHP
+Smarty
+AWS
+MySQL
+2012年04月〜現在
+
+某求人サイトの開発、改修
+PHP
+FuelPHP
+MySQL
+2017年03月〜現在
+
+【趣味】
+
+登山。
+料理。
+飲み会。
+マンガ。
+映画。
+ドラマ。
+お笑いライブ。
+読書。
+
 EOT;
 echo nl2br($html);
 ?>
