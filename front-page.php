@@ -45,10 +45,10 @@ WEBサイト制作<br />
 <!--ここからWordPressのナビ作成のタグ-->
 <ul class="nav navbar-nav">
 <li id="menu-item-18" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-8 current_page_item menu-item-18">
-<a href="http://wp.localhost/">HOME</a>
+<a href="<?php echo home_url( '/' ); ?>">HOME</a>
 </li>
 <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19">
-<a href="http://wp.localhost/inquiry/">お問い合わせ</a>
+<a href="<?php echo home_url( '/' ); ?>inquiry/">お問い合わせ</a>
 </li>
 </ul><!--WordPressのナビ作成のタグここまで-->
 </div>
@@ -57,7 +57,7 @@ WEBサイト制作<br />
 
 
 
-<div class="container" style="margin-top:50px;"><!-- 全体を囲むコンテナ -->
+<div class="container" style="margin-top:50px;margin-bottom:45px;"><!-- 全体を囲むコンテナ -->
 
 <div class="row bg_write" style="height:30px;">
 </div>
@@ -159,6 +159,19 @@ visible-xs
 </div>
 
 </div><!-- 全体を囲むコンテナ -->
+
+<div id="footer_menu">
+<div class="container">
+<ul>
+<li style="font-size:10px;">
+WEBサイト制作<br />
+アウトドアチャイルド
+</li>
+<li class="menu_1"><a href="<?php echo home_url( '/' ); ?>">HOME</a></li>
+<li class="menu_2"><a href="<?php echo home_url( '/' ); ?>inquiry/">お問い合わせ</a></li>
+</ul>
+</div>
+</div>
 
 <?php wp_footer(); ?>
 

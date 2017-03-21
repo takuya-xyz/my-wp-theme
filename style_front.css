@@ -102,7 +102,7 @@ h2{
 #footer{
 	
 	background:#fff;
-	margin:0px 0px 20px 0px;
+	margin:0px 0px 0px 0px;
 	padding:10px 0px 10px 0px;
 	
 	text-align:center;
@@ -191,6 +191,43 @@ h2{
   transition: .3s;
 }
 #menu li a:hover {  background: rgba(0,0,0,.3) }
+
+/*--------------------------*/
+
+#footer_menu{
+	
+	position:fixed;
+    z-index:100;
+    width:100%;
+    bottom:0px;
+    background: rgba(0,0,0,.7);
+    transition: .3s;
+	color:#fff;
+	height:45px;
+	bottom:-45px;
+}
+
+#footer_menu ul{
+	margin:0px;
+	padding:0px;
+}
+
+#footer_menu ul li{
+	float:left;
+	list-style-type: none;
+}
+
+#footer_menu ul li.menu_1{
+	margin:10px 0px 0px 40px;
+}
+
+#footer_menu ul li.menu_2{
+	margin:10px 0px 0px 20px;
+}
+
+#footer_menu ul li a{
+	color:#fff;
+}
 
 /*--------------------------*/
 
