@@ -162,14 +162,40 @@ visible-xs
 
 <div id="footer_menu">
 <div class="container">
+
+<div class="visible-xs">
+
+<div id="footer_menu_list">
+<a href="<?php echo home_url( '/' ); ?>">HOME</a>
+<a href="<?php echo home_url( '/' ); ?>inquiry/">お問い合わせ</a>
+</div>
+
+<div style="float:left;font-size:10px;padding:5px;color:#fff;">
+WEBサイト制作<br />
+アウトドアチャイルド
+</div>
+
+<div style="float:right;padding-top:10px;">
+<input type="button" value="MENU" id="footer_menu_list_btn" />
+</div>
+
+<br class="clear" />
+
+</div>
+
+<div class="hidden-xs">
+
 <ul>
-<li style="font-size:10px;">
+<li style="font-size:10px;color:#fff;">
 WEBサイト制作<br />
 アウトドアチャイルド
 </li>
 <li class="menu_1"><a href="<?php echo home_url( '/' ); ?>">HOME</a></li>
 <li class="menu_2"><a href="<?php echo home_url( '/' ); ?>inquiry/">お問い合わせ</a></li>
 </ul>
+
+</div>
+
 </div>
 </div>
 
