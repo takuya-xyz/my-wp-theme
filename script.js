@@ -52,10 +52,23 @@ $(function() {
 	  startPos = currentPos;
 	});
 	
-	
-	
 	$("#footer_menu_list_btn").click(function () {
 	  $("#footer_menu_list").toggle();
 	});
+	
+	
+	
+	var flg = 0;
+	setInterval(function(){
+    	if( flg == 0 ){
+			$("#otoiawase").removeClass("animated rubberBand");
+			flg = 1;
+    	}else{
+    		$("#otoiawase").addClass("animated rubberBand");
+    		flg = 0;
+    	}
+    },3000);
+	
+	
 	
 });

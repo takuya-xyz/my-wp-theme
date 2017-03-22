@@ -20,6 +20,8 @@
 
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style_particles.css" />
 
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/animate.css" />
+
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style_front.css" />
 
 </head>
@@ -36,9 +38,9 @@
 <span class="icon-bar"></span>
 <span class="icon-bar"></span>
 </button>
-<a href="http://wp.localhost" class="navbar-brand" style="color:#fff;">
+<a href="<?php echo home_url( '/' ); ?>" class="navbar-brand" style="color:#fff;">
 WEBサイト制作<br />
-アウトオブチャイルド
+アウトドアチャイルド
 </a>
 </div>
 <div class="collapse navbar-collapse" id="mainNav">
@@ -141,7 +143,7 @@ echo nl2br($html);
 </div>
 
 <div class="hidden-xs col-sm-4" id="front-side_area">
-side
+<a href="<?php echo home_url( '/' ); ?>inquiry/" id="otoiawase" class="otoiawase animated rubberBand">お問い合わせ</a>
 </div>
 
 </div>
