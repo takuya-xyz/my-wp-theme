@@ -291,13 +291,36 @@ h2{
 	
 	margin:0px 0px 0px 0px;
 	background:#fff;
-	height:2400px;
+	height:2600px;
 	color:#fff;
 }
 
 .fixed {
   position: fixed;
   top: 60px;
+}
+
+/*--------------------------*/
+
+#page-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    font-size: 77%;
+}
+#page-top a {
+    background: #666;
+    text-decoration: none;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    display: block;
+    border-radius: 5px;
+    font-size:12px;
+}
+#page-top a:hover {
+    text-decoration: none;
+    background: #999;
 }
 
 /*--------------------------*/

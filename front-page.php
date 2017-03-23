@@ -26,6 +26,7 @@
 
 </head>
 <body>
+<div id="wrap">
 
 <?php //get_template_part('navbar'); ?>
 
@@ -186,6 +187,8 @@ echo nl2br($html);
 </div>
 
 <div id="side_fix_test_2">
+
+<div style="margin-bottom:20px;">
 <div style="float:left;">
 <img src="<?php echo home_url( '/' ); ?>wp-content/uploads/2017/03/creator.jpg" width="80" />
 </div>
@@ -193,6 +196,10 @@ echo nl2br($html);
 WEBサイト制作に関することなら何でもお気軽にご相談ください。
 </div>
 <br class="clear" />
+</div>
+
+<a href="<?php echo home_url( '/' ); ?>inquiry/" id="otoiawase" class="otoiawase animated rubberBand">お問い合わせ</a>
+
 </div>
 
 </div>
@@ -246,6 +253,13 @@ WEBサイト制作<br />
 </div>
 </div>
 
+<p id="page-top">
+<a href="#wrap">
+PAGE<br />
+TOP
+</a>
+</p>
+
 <?php wp_footer(); ?>
 
 <div id="particles-js"></div>
@@ -254,5 +268,6 @@ WEBサイト制作<br />
 <script src="<?php echo get_template_directory_uri(); ?>/set.js"></script>
 <script src="<?php echo get_template_directory_uri(); ?>/script.js"></script>
 
+</div>
 </body>
 </html>

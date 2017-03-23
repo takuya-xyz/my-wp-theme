@@ -28,6 +28,10 @@ var side_offset_top = $( '#side_fix_test_2' ).get( 0 ).offsetTop;
 
 $(function() {
 	
+	var showFlag = false;
+    var topBtn = $('#page-top');    
+    topBtn.css('bottom', '-100px');
+	
 	win.resize(function() {
 		
 		//var body_h = $("body").height();
@@ -84,9 +88,23 @@ if( currentPos > side_offset_top ) {
 	$("#side_fix_test_2").removeClass('fixed');
 
 }
-	  
-	  
-	  
+
+
+
+if ($(this).scrollTop() > 100) {
+    if (showFlag == false) {
+        showFlag = true;
+        topBtn.stop().animate({'bottom' : '20px'}, 200); 
+    }
+} else {
+    if (showFlag) {
+        showFlag = false;
+        topBtn.stop().animate({'bottom' : '-100px'}, 200); 
+    }
+}
+
+
+
 	});
 	
 	$("#footer_menu_list_btn").click(function () {
@@ -95,13 +113,23 @@ if( currentPos > side_offset_top ) {
 	
 	
 	
+	//スクロールしてトップ
+    topBtn.click(function () {
+        $('body,html').animate({
+            scrollTop: 0
+        }, 500);
+        return false;
+    });
+	
+	
+	
 	var flg = 0;
 	setInterval(function(){
     	if( flg == 0 ){
-			$("#otoiawase").removeClass("animated rubberBand");
+			$(".otoiawase").removeClass("animated rubberBand");
 			flg = 1;
     	}else{
-    		$("#otoiawase").addClass("animated rubberBand");
+    		$(".otoiawase").addClass("animated rubberBand");
     		flg = 0;
     	}
     },3000);
