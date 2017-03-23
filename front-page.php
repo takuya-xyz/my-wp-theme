@@ -84,10 +84,14 @@ $html=<<<EOT
 サイト制作に関することでしたら、コーディングからプログラム、サーバ管理まで、なんでも対応可能です。
 エンジニア歴は10年以上になります。
 
-使用可能言語、ツール：PHP、JavaScript、jQuery、(X)HTML、CSS、HTML5、CSS3、svn、git
-使用可能なフレームワーク：FuelPHP、CakePHP、Zend Framework、symfony、Codeigniter
-使用可能なデータベース：MySQL、PostgreSQL
-使用可能OS：Windows全般、Linux全般
+使用可能な言語やツールなどは以下になります。
+
+言語：PHP、JavaScript、jQuery、(X)HTML、CSS、HTML5、CSS3
+CMS：WordPress、Movable Type、EC-CUBE
+フレームワーク：FuelPHP、CakePHP、Zend Framework、symfony、Codeigniter
+データベース：MySQL、PostgreSQL
+バージョン管理ツール：svn、git
+OS：Windows全般、Linux全般
 
 連絡の手段はご都合に合わせて柔軟に対応致します。
 
@@ -133,6 +137,16 @@ echo nl2br($html);
 ?>
 </div>
 
+
+
+<div class="hidden-xs">
+<div id="side_fix_test_3">
+後半は変動。
+</div>
+</div>
+
+
+
 </div>
 
 <div id="front_right_box">
@@ -143,15 +157,46 @@ echo nl2br($html);
 </div>
 
 <div class="hidden-xs col-sm-4" id="front-side_area">
+
 <a href="<?php echo home_url( '/' ); ?>inquiry/" id="otoiawase" class="otoiawase animated rubberBand">お問い合わせ</a>
+
+<div id="side_fix_test_1" style="text-align:center;margin-bottom:20px;margin-top:40px;">
+
+<img src="<?php echo get_template_directory_uri(); ?>/images/tools/php.png" width="150" /><br />
+<img src="<?php echo get_template_directory_uri(); ?>/images/tools/jquery.png" width="150" /><br />
+<img src="<?php echo get_template_directory_uri(); ?>/images/tools/html5.png" width="150" /><br />
+<img src="<?php echo get_template_directory_uri(); ?>/images/tools/css3.png" width="120" /><br />
+
+<img src="<?php echo get_template_directory_uri(); ?>/images/tools/mysql.png" width="150" /><br />
+<img src="<?php echo get_template_directory_uri(); ?>/images/tools/postgresql.png" width="150" /><br />
+
+<img src="<?php echo get_template_directory_uri(); ?>/images/tools/wordpress.jpg" width="150" /><br />
+<img src="<?php echo get_template_directory_uri(); ?>/images/tools/mt.png" width="200" /><br />
+<img src="<?php echo get_template_directory_uri(); ?>/images/tools/eccube.png" width="150" /><br />
+
+<img src="<?php echo get_template_directory_uri(); ?>/images/tools/fuelphp.png" width="300" /><br />
+<img src="<?php echo get_template_directory_uri(); ?>/images/tools/cakephp.png" width="300" /><br />
+<img src="<?php echo get_template_directory_uri(); ?>/images/tools/zendframework.png" width="150" /><br />
+<img src="<?php echo get_template_directory_uri(); ?>/images/tools/codeigniter.png" width="150" /><br />
+<img src="<?php echo get_template_directory_uri(); ?>/images/tools/symfony.png" width="150" /><br />
+
+<img src="<?php echo get_template_directory_uri(); ?>/images/tools/github.png" width="150" /><br />
+<img src="<?php echo get_template_directory_uri(); ?>/images/tools/centos.png" width="150" />
+
+</div>
+
+<div id="side_fix_test_2">
+<div style="float:left;">
+<img src="<?php echo home_url( '/' ); ?>wp-content/uploads/2017/03/creator.jpg" width="80" />
+</div>
+<div style="float:left;width:200px;margin-left:10px;">
+WEBサイト制作に関することなら何でもお気軽にご相談ください。
+</div>
+<br class="clear" />
 </div>
 
 </div>
 
-<div class="row">
-<div class="visible-xs" id="bottom_area_xs">
-visible-xs
-</div>
 </div>
 
 <div class="row">

@@ -263,10 +263,41 @@ h2{
 	text-align:center;
 	display:block;
 	cursor: pointer;
+	margin:0px auto 0px auto;
 }
 
 .otoiawase:hover{
 	color:#fff;
+}
+
+/*--------------------------*/
+
+#side_fix_test_1{
+	
+	margin:20px 0px 0px 0px;
+	/*height:900px;*/
+	color:#fff;
+}
+
+#side_fix_test_2{
+	
+	margin:0px 0px 0px 0px;
+	height:200px;
+	width:300px;
+	
+}
+
+#side_fix_test_3{
+	
+	margin:0px 0px 0px 0px;
+	background:#fff;
+	height:2400px;
+	color:#fff;
+}
+
+.fixed {
+  position: fixed;
+  top: 60px;
 }
 
 /*--------------------------*/
