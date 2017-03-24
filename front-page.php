@@ -16,11 +16,16 @@
 <!-- BootstrapのJS読み込み -->
 <script src="<?php echo get_template_directory_uri(); ?>/js/bootstrap.min.js"></script>
 
+<script src="<?php echo get_template_directory_uri(); ?>/js/remodal.js"></script>
+
 <?php wp_head();?>
 
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style_particles.css" />
 
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/animate.css" />
+
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/remodal.css" />
+<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/remodal-default-theme.css" />
 
 <link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/style_front.css" />
 
@@ -51,7 +56,7 @@ WEBサイト制作<br />
 <a href="<?php echo home_url( '/' ); ?>">HOME</a>
 </li>
 <li id="menu-item-19" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-19">
-<a href="<?php echo home_url( '/' ); ?>inquiry/">お問い合わせ</a>
+<a data-remodal-target="modal">お問い合わせ</a>
 </li>
 </ul><!--WordPressのナビ作成のタグここまで-->
 </div>
@@ -185,6 +190,32 @@ echo nl2br($html);
 
 
 
+<div class="remodal" data-remodal-id="modal" data-remodal-options="hashTracking:false">
+	<button data-remodal-action="close" class="remodal-close"></button>
+	<p>
+<div>
+<?php if ( have_posts() ) : /** WordPress ループ */
+while ( have_posts() ) : the_post(); /** 繰り返し処理開始 */ ?>
+<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+
+<?php if( !is_front_page() ){ ?>
+<h2><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
+<?php } ?>
+<?php the_content(); ?>
+</div>
+<?php endwhile; /** 繰り返し処理終了 */
+else: /** ここから記事が見つからなかった場合の処理 */ ?>
+<div class="post page">
+<h2>ページがありません</h2>
+<p>お探しのページは見つかりませんでした。</p>
+</div>
+<?php endif; /** WordPress ループここまで */ ?>
+</div>
+	</p>
+</div>
+
+
+
 <div class="hidden-xs">
 <div id="side_fix_test_3">
 </div>
@@ -203,7 +234,9 @@ echo nl2br($html);
 
 <div class="hidden-xs col-sm-4" id="front-side_area">
 
-<a href="<?php echo home_url( '/' ); ?>inquiry/" id="otoiawase" class="otoiawase animated rubberBand">お問い合わせ</a>
+<a data-remodal-target="modal" id="otoiawase" class="otoiawase animated rubberBand">
+お問い合わせ
+</a>
 
 <div id="side_fix_test_1" style="text-align:center;margin-bottom:20px;margin-top:40px;">
 
@@ -242,7 +275,7 @@ WEBサイト制作に関することなら何でもお気軽にご相談くだ�
 <br class="clear" />
 </div>
 
-<a href="<?php echo home_url( '/' ); ?>inquiry/" id="otoiawase" class="otoiawase animated rubberBand">お問い合わせ</a>
+<a data-remodal-target="modal" id="otoiawase" class="otoiawase animated rubberBand">お問い合わせ</a>
 
 </div>
 
@@ -265,7 +298,7 @@ WEBサイト制作に関することなら何でもお気軽にご相談くだ�
 
 <div id="footer_menu_list">
 <a href="<?php echo home_url( '/' ); ?>">HOME</a>
-<a href="<?php echo home_url( '/' ); ?>inquiry/">お問い合わせ</a>
+<a data-remodal-target="modal">お問い合わせ</a>
 </div>
 
 <div style="float:left;font-size:10px;padding:5px;color:#fff;">
@@ -289,7 +322,7 @@ WEBサイト制作<br />
 アウトドアチャイルド
 </li>
 <li class="menu_1"><a href="<?php echo home_url( '/' ); ?>">HOME</a></li>
-<li class="menu_2"><a href="<?php echo home_url( '/' ); ?>inquiry/">お問い合わせ</a></li>
+<li class="menu_2"><a data-remodal-target="modal">お問い合わせ</a></li>
 </ul>
 
 </div>

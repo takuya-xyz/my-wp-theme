@@ -325,6 +325,14 @@ h2{
 
 /*--------------------------*/
 
+.wpcf7-text,.wpcf7-textarea{
+	
+	width:100%;
+	
+}
+
+/*--------------------------*/
+
 @media screen and (max-width : 767px){
 	
 	#mainNav{
