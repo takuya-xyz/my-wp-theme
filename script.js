@@ -136,4 +136,16 @@ if ($(this).scrollTop() > 100) {
 	
 	
 	
+	//スムーズスクロールを強制的に無効にする
+	if(navigator.userAgent.match(/MSIE 10/i) || navigator.userAgent.match(/Trident\/7\./) || navigator.userAgent.match(/Edge\/12\./)) {
+		 $('body').on("mousewheel", function () {
+		 event.preventDefault();
+		 var wd = event.wheelDelta;
+		 var csp = window.pageYOffset;
+		 window.scrollTo(0, csp - wd);
+		 });
+	}
+	
+	
+	
 });

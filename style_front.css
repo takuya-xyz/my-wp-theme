@@ -328,7 +328,7 @@ h2{
 @media screen and (max-width : 767px){
 	
 	#mainNav{
-		background:#333;
+		background: rgba(0,0,0,.6);
 	}
 	
 	.navbar-default .navbar-nav > li > a:hover {
